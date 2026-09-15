@@ -13,7 +13,16 @@
         // zmk,physical-layout = &foostan_corne_5col_layout;
     };
 };
-
+/ {
+  conditional_layers {
+      compatible = "zmk,conditional-layers";
+  
+      num {
+          if-layers = <1 2>;
+          then-layer = <3>;
+      };
+  };
+};
 
 / {
     keymap {
